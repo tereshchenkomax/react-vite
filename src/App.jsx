@@ -1,5 +1,5 @@
 import './App.css';
-import RewardCalculator from './components/RewardCalculator';
+import RewardCalculator from './components/RewardCalculator/RewardCalculator';
 
 function App() {
   return <RewardCalculator />;

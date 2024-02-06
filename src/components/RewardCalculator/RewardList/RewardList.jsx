@@ -1,4 +1,3 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 
 function RewardList({ points }) {
@@ -8,25 +7,21 @@ function RewardList({ points }) {
       <table>
         <thead>
           <tr>
-            <th>Customer ID</th>
+            <th>Customer</th>
+            <th>January Points</th>
+            <th>February Points</th>
+            <th>March Points</th>
             <th>Total Points</th>
-            <th>Points by Month</th>
           </tr>
         </thead>
-        <tbody style={{ textAlign: 'left' }}>
+        <tbody>
           {Object.entries(points).map(([customerId, rewardData]) => (
             <tr key={customerId}>
               <td>{customerId}</td>
+              <td>{rewardData.monthly[0] || 0}</td>
+              <td>{rewardData.monthly[1] || 0}</td>
+              <td>{rewardData.monthly[2] || 0}</td>
               <td>{rewardData.total}</td>
-              <td>
-                {Object.entries(rewardData.monthly).map(
-                  ([month, points], index) => (
-                    <div key={index}>{`Month ${
-                      parseInt(month, 10) + 1
-                    }: ${points}`}</div>
-                  ),
-                )}
-              </td>
             </tr>
           ))}
         </tbody>

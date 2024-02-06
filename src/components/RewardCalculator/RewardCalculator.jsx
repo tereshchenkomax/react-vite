@@ -1,9 +1,9 @@
-import TransactionList from './TransactionList';
-import RewardList from './RewardList';
-import { calculatePoints } from '../utils/transactions';
-import { fetchTransactions } from '../services/api';
+import TransactionList from './TransactionList/TransactionList';
+import RewardList from './RewardList/RewardList';
+import { calculatePoints } from '../../utils/transactions';
+import { fetchTransactions } from '../../services/api';
 import { useEffect, useState } from 'react';
-import reactLogo from '../assets/react.svg';
+import reactLogo from '../../assets/react.svg';
 
 export default function RewardCalculator() {
   const [transactions, setTransactions] = useState([]);
@@ -37,9 +37,9 @@ export default function RewardCalculator() {
   }
 
   return (
-    <div>
+    <>
       <TransactionList transactions={transactions} />
       <RewardList points={calculatePoints(transactions)} />
-    </div>
+    </>
   );
 }
