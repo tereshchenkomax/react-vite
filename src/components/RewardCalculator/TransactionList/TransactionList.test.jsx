@@ -11,7 +11,6 @@ describe('TransactionList', () => {
     expect(screen.getByText('Customer')).toBeInTheDocument();
     expect(screen.getByText('Transaction Amount')).toBeInTheDocument();
     expect(screen.getByText('Date')).toBeInTheDocument();
-    screen.logTestingPlaygroundURL();
 
     expect(
       screen.getByRole('row', {
