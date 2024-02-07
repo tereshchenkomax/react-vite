@@ -59,10 +59,4 @@ export const transactionsMock = [
     amount: 110,
     date: '2023-03-28T18:00:00.000Z',
   },
-  {
-    transactionId: 'txn11',
-    customerId: 'user3',
-    amount: 200,
-    date: '2023-04-01T08:50:00.000Z',
-  },
 ];

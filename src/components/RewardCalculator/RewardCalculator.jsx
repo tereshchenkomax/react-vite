@@ -38,6 +38,7 @@ export default function RewardCalculator() {
 
   return (
     <>
+      <h1>Reward Calculator</h1>
       <TransactionList transactions={transactions} />
       <RewardList points={calculatePoints(transactions)} />
     </>
